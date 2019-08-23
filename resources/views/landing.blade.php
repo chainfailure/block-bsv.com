@@ -25,7 +25,7 @@
 
                     <div class="mt-4">
                         <h2>What users are you blocking?</h2>
-                        <p>You can check the full list <a href="{{route('entry.index')}}">here</a>.</p>
+                        <p>You can check the full list <a href="{{route('entry.index')}}">here</a>, we currently have {{$entry_amount}} entries.</p>
                     </div>
 
                     <div class="mt-4">
