@@ -29,7 +29,7 @@
                             @foreach($entries as $entry)
                                 <tr>
                                     <td>
-                                        <a href="https://twitter.com/{{$entry->handle}}">@{{$entry->handle}}</a>
+                                        <a href="https://twitter.com/{{$entry->handle}}">{{$entry->handle}}</a>
                                     </td>
                                     <td>{{$entry->reason}}</td>
                                 </tr>
