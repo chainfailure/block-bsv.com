@@ -41,6 +41,11 @@ class AddEntry extends Command
         $handle = $this->argument('handle');
         $reason = $this->argument('reason');
 
+        if (Entry::where('handle', $handle)->count()) {
+            $this->error("{$handle} already on the blocklist!");
+            return ;
+        }
+
         $entry = Entry::create([
             'handle' => $handle,
             'reason' => $reason,
