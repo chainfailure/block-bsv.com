@@ -6,7 +6,7 @@ use App\Entry;
 use Illuminate\Http\Request;
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-class SetupController extends Controller
+class BlockController extends Controller
 {
     private $twitter;
 
@@ -18,7 +18,7 @@ class SetupController extends Controller
     public function requestConsent()
     {
         $resp = $this->twitter->oauth('oauth/request_token', [
-            'oauth_callback' => route('twitter.callback'),
+            'oauth_callback' => route('block.callback'),
         ]);
 
         return redirect()->to("https://api.twitter.com/oauth/authenticate?oauth_token={$resp['oauth_token']}");
@@ -32,20 +32,20 @@ class SetupController extends Controller
         $access_data = $this->twitter->oauth('oauth/access_token', [
             'oauth_token' => $token,
             'oauth_verifier' => $verifier,
-            'oauth_consumer_key' => env('TWITTER_CONSUMER_KEY'),
+            'oauth_consumer_key' => config('twitter.consumer_key'),
         ]);
 
         $request->session()->put('user_oauth', $access_data);
 
-        return redirect()->to(route('twitter.process'));
+        return redirect()->to(route('block.process'));
     }
 
     public function process(Request $request)
     {
         $access_data = $request->session()->get('user_oauth');
         $user_client = new TwitterOAuth(
-            env('TWITTER_CONSUMER_KEY'),
-            env('TWITTER_CONSUMER_SECRET'),
+            config('twitter.consumer_key'),
+            config('twitter.consumer_secret'),
             $access_data['oauth_token'],
             $access_data['oauth_token_secret'],
         );
@@ -57,7 +57,7 @@ class SetupController extends Controller
             ]);
         }
 
-        return redirect()->to(route('twitter.done'));
+        return redirect()->to(route('block.done'));
     }
 
     public function done()

@@ -33,7 +33,7 @@
                         </ul>
                     </div>
                 </section>
-                <a class="btn btn-primary btn-lg" href="{{route('twitter.setup')}}">
+                <a class="btn btn-primary btn-lg mt-4" href="{{route('block.setup')}}">
                     Block them daddy
                 </a>
             </div>

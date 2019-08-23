@@ -1,8 +1,29 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
 // Variables
 @import 'variables';
+
+// Somebody on twitter will call me out for using important sooner or later
+.btn-primary {
+    color: #fff !important;
+    padding: 0.5rem 4rem !important;
+    border: 0 !important;
+}
+
+.btn-primary:active {
+    background-color: #F58A08 !important;
+}
+
+.btn-primary:hover {
+    background-color: #F9A136 !important;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 !important;
+}
+
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

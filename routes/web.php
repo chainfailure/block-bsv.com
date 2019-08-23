@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'LandingController@index');
-Route::get('/setup', 'SetupController@requestConsent')->name('twitter.setup');
-Route::get('/twitter-callback', 'SetupController@callback')->name('twitter.callback');
-Route::get('/process', 'SetupController@process')->name('twitter.process');
-Route::get('/done', 'SetupController@done')->name('twitter.done');
+Route::get('/setup', 'BlockController@requestConsent')->name('block.setup');
+Route::get('/twitter-callback', 'BlockController@callback')->name('block.callback');
+Route::get('/process', 'BlockController@process')->name('block.process');
+Route::get('/done', 'BlockController@done')->name('block.done');

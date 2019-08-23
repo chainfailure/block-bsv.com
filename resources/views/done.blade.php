@@ -20,10 +20,13 @@
 
                     <div class="mt-4">
                         <h2>Make sure to:</h2>
-                        <p><a href="https://twitter.com/settings/applications">Remove our authorization from your twitter account</a>. We're not storing the authorized keys so it doesn't make sense leaving them authorized either. Make sure to come back once in a while as we're adding new entries often.</p>
+                        <p>Make sure to remove our app from your authorized apps list. We're not storing the authorized keys so it doesn't make sense leaving them authorized. Make sure to come back once in a while as we're adding new entries often.</p>
                     </div>
                 </section>
 
+                <a href="https://twitter.com/settings/applications" class="btn btn-primary">
+                    Remove our app
+                </a>
             </div>
         </div>
     </body>
