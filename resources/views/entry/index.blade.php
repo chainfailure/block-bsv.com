@@ -10,7 +10,7 @@
     <body>
         <div class="container text-center" style="max-width: 800px">
             <div class="p-5">
-                <h1 class="display-3">Blocklist entries</h1>
+                <h1 class="display-3">{{$entries->total()}} blocklist entries</h1>
 
                 <section class="text-left">
                     <div class="mt-4">
