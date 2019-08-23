@@ -47,7 +47,7 @@ class BlockController extends Controller
             config('twitter.consumer_key'),
             config('twitter.consumer_secret'),
             $access_data['oauth_token'],
-            $access_data['oauth_token_secret'],
+            $access_data['oauth_token_secret']
         );
 
         foreach (Entry::all() as $entry) {
