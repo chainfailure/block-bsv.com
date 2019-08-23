@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(TwitterOAuth::class, function () {
             return new TwitterOAuth(
                 config('twitter.consumer_key'),
-                config('twitter.consumer_secret'),
+                config('twitter.consumer_secret')
             );
         });
     }
