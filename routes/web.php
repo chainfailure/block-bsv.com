@@ -15,4 +15,5 @@ Route::get('/', 'LandingController@index');
 Route::get('/setup', 'BlockController@requestConsent')->name('block.setup');
 Route::get('/twitter-callback', 'BlockController@callback')->name('block.callback');
 Route::get('/process', 'BlockController@process')->name('block.process');
+Route::get('/denied', 'BlockController@denied')->name('block.denied');
 Route::get('/done', 'BlockController@done')->name('block.done');

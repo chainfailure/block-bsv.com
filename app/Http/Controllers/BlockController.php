@@ -29,6 +29,10 @@ class BlockController extends Controller
         $token    = $request->get('oauth_token');
         $verifier = $request->get('oauth_verifier');
 
+        if ($request->has('denied')) {
+            return redirect()->to(route('block.denied'));
+        }
+
         $access_data = $this->twitter->oauth('oauth/access_token', [
             'oauth_token' => $token,
             'oauth_verifier' => $verifier,
@@ -61,6 +65,11 @@ class BlockController extends Controller
         $request->session()->forget('user_oauth');
 
         return redirect()->to(route('block.done'));
+    }
+
+    public function denied()
+    {
+        return view('denied');
     }
 
     public function done()

@@ -24,7 +24,7 @@
                     </div>
                 </section>
 
-                <a href="https://twitter.com/settings/applications" class="btn btn-primary">
+                <a href="https://twitter.com/settings/applications" class="btn btn-primary mt-4">
                     Remove our app
                 </a>
             </div>
