@@ -24,6 +24,11 @@
                     </div>
 
                     <div class="mt-4">
+                        <h2>What users are you blocking?</h2>
+                        <p>You can check the full list <a href="{{route('entry.index')}}">here</a>.</p>
+                    </div>
+
+                    <div class="mt-4">
                         <h2>How does it work?</h2>
                         <ul class="text-left">
                             <li>You click the button underneath.</li>

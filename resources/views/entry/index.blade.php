@@ -15,7 +15,7 @@
                 <section class="text-left">
                     <div class="mt-4">
                         <h2>I'm on this list and I don't agree</h2>
-                        <p>Fuck off.</p>
+                        <p>Send an email to <a href="mailto:info@block-bsv.com">info@block-bsv.com</a> and we'll see if you're eligible for removal.</p>
                     </div>
 
                     <table class="table table-sm">
