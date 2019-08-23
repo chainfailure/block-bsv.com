@@ -17,3 +17,5 @@ Route::get('/twitter-callback', 'BlockController@callback')->name('block.callbac
 Route::get('/process', 'BlockController@process')->name('block.process');
 Route::get('/denied', 'BlockController@denied')->name('block.denied');
 Route::get('/done', 'BlockController@done')->name('block.done');
+
+Route::get('/entries', 'EntryController@index')->name('entry.index');

@@ -32,6 +32,11 @@
                             <li>We remind you to remove our authorization as we're not storing your access keys. There is no use for them to remain authorized.</li>
                         </ul>
                     </div>
+
+                    <div class="mt-4">
+                        <h2>Why all the permissions?</h2>
+                        <p><a href="https://stackoverflow.com/questions/22264255/how-do-i-specify-the-scope-with-twitter-oauth">Twitter does not allow developers to request access to specific features</a>, which makes it an all or nothing situation.</p>
+                    </div>
                 </section>
                 <a class="btn btn-primary btn-lg mt-4" href="{{route('block.setup')}}">
                     Block them daddy
