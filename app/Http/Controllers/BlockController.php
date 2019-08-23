@@ -57,6 +57,9 @@ class BlockController extends Controller
             ]);
         }
 
+        // Clear session to not keep access tokens lingering around
+        $request->session()->forget('user_oauth');
+
         return redirect()->to(route('block.done'));
     }
 
