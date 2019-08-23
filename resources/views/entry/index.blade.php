@@ -28,7 +28,9 @@
                         <tbody>
                             @foreach($entries as $entry)
                                 <tr>
-                                    <td>{{$entry->handle}}</td>
+                                    <td>
+                                        <a href="https://twitter.com/{{$entry->handle}}">@{{$entry->handle}}</a>
+                                    </td>
                                     <td>{{$entry->reason}}</td>
                                 </tr>
                             @endforeach
