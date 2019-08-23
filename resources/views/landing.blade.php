@@ -28,7 +28,7 @@
                         <ul class="text-left">
                             <li>You click the button underneath.</li>
                             <li>Twitter will prompt you to authorize us to modify your blocklist.</li>
-                            <li>Once we are granted access we add, what we believe, are BSV centered accounts to your blocklist.</li>
+                            <li>Once we are granted access we add, what we believe are, BSV centered accounts to your blocklist.</li>
                             <li>We remind you to remove our authorization as we're not storing your access keys. There is no use for them to remain authorized.</li>
                         </ul>
                     </div>
