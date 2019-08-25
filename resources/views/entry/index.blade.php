@@ -31,7 +31,16 @@
                                     <td>
                                         <a href="https://twitter.com/{{$entry->handle}}">{{$entry->handle}}</a>
                                     </td>
-                                    <td>{{$entry->reason}}</td>
+                                    <td>
+                                        {{$entry->reason}}
+                                        @if($entry->violations->count())
+                                            (
+                                                @foreach ($entry->violations as $index => $violation)
+                                                    <a target="_blank" href="/violation/{{$violation->id}}">{{$index + 1}}</a>
+                                                @endforeach
+                                            )
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

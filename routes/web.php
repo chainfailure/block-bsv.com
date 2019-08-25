@@ -19,3 +19,4 @@ Route::get('/denied', 'BlockController@denied')->name('block.denied');
 Route::get('/done', 'BlockController@done')->name('block.done');
 
 Route::get('/entries', 'EntryController@index')->name('entry.index');
+Route::get('/violation/{violation}', 'EntryController@violation')->name('entry.violation');

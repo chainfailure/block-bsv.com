@@ -15,7 +15,10 @@ class CreateViolationsTable extends Migration
     {
         Schema::create('violations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('entry_id')->references('id')->on('entries');
+            $table->unsignedInteger('entry_id')
+                ->references('id')
+                ->on('entries')
+                ->onDelete('cascade');
             $table->string('link');
             $table->string('screenshot');
             $table->timestamps();
