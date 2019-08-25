@@ -52,6 +52,7 @@ class EntryViolation extends Command
         $this->info('Capturing screenshot of violation...');
 
         Browsershot::url($link)
+            ->noSandbox()
             ->windowSize(1920, 1080)
             ->waitUntilNetworkIdle()
             ->save(storage_path("app/violations/{$filename}.png"));
