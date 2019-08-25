@@ -13,7 +13,7 @@ class EntryViolation extends Command
      *
      * @var string
      */
-    protected $signature = 'entry:violation {entry} {link}';
+    protected $signature = 'entry:violation {handle} {link}';
 
     /**
      * The console command description.
@@ -40,10 +40,10 @@ class EntryViolation extends Command
     public function handle()
     {
         $filename = uniqid();
-        $entryId  = $this->argument('entry');
+        $handle   = $this->argument('handle');
         $link     = $this->argument('link');
 
-        $entry = Entry::find($entryId);
+        $entry = Entry::whereHandle($handle)->first();
         if ($entry === null) {
             $this->error('Could not specified entry.');
             return ;
