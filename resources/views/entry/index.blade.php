@@ -36,7 +36,7 @@
                                         @if($entry->violations->count())
                                             (
                                                 @foreach ($entry->violations as $index => $violation)
-                                                    <a target="_blank" href="/violation/{{$violation->id}}">{{$index + 1}}</a>
+                                                    <a target="_blank" href="{{route('entry.violation', ['violation' => $violation])}}">{{$index + 1}}</a>
                                                 @endforeach
                                             )
                                         @endif

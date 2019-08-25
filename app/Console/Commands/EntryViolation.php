@@ -39,8 +39,9 @@ class EntryViolation extends Command
      */
     public function handle()
     {
-        $entryId = $this->argument('entry');
-        $link = $this->argument('link');
+        $filename = uniqid();
+        $entryId  = $this->argument('entry');
+        $link     = $this->argument('link');
 
         $entry = Entry::find($entryId);
         if ($entry === null) {
@@ -50,7 +51,6 @@ class EntryViolation extends Command
 
         $this->info('Capturing screenshot of violation...');
 
-        $filename = uniqid();
         Browsershot::url($link)
             ->windowSize(1920, 1080)
             ->waitUntilNetworkIdle()
@@ -59,7 +59,7 @@ class EntryViolation extends Command
         $this->info("Screenshot captured, saved as {$filename}.");
 
         $violation = $entry->violations()->create([
-            'link' => $link,
+            'link'       => $link,
             'screenshot' => $filename,
         ]);
 
